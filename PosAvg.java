@@ -68,11 +68,15 @@ public class PosAvg {
 	
 	public int indexOfStation()   {
 		return indexOfStation;
-		
 	}
+	
+	
 	
 	@Override
 	public String toString()   {
-		return "This index is average of NOWA and OILT, NEWP and OKCE, and so on.";   //NOT DONE!!!
+		System.out.println(indexOfStation);   //Testing
+		System.out.println(stationIdList[indexOfStation - 1]);
+		return "This index is average of " + stationIdList[indexOfStation -2] + " and " + stationIdList[indexOfStation] + 
+				", " + stationIdList[indexOfStation -3] + " and " + stationIdList[indexOfStation +1] + ", and so on.";   //NOT DONE!!!
 	}
 }
