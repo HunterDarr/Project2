@@ -11,6 +11,7 @@ public class Driver
 		PosAvg posAvg = new PosAvg("NRMN");   //Testing
 		System.out.println("The Index of the city is: " + posAvg.indexOfStation());   //Testing
 		System.out.println(posAvg);   //Testing
+		MesoInherit test = new MesoInherit("NRMN");   //Testing
 //		String stID = "OKCE";
 //		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 //		
