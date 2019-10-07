@@ -8,7 +8,8 @@ public class Driver
 {
 	public static void main(String[] args) throws IOException 
 	{
-		PosAvg posAvg = new PosAvg("OKCE");   //Testing
+		PosAvg posAvg = new PosAvg("NRMN");   //Testing
+		System.out.println("The Index of the city is: " + posAvg.indexOfStation());   //Testing
 //		String stID = "OKCE";
 //		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 //		

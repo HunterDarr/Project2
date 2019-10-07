@@ -8,15 +8,20 @@ public class PosAvg {
 	
 	private int capacity = 0;
 	
+	private String stid;
+	
+	private int indexOfStation;
+	
 	
 	public PosAvg(String stid) throws IOException   {
+		this.stid = stid;
 		read();
 	}
 	
 	
 	/**
 	 * This method skips 3 lines in the Mesonet.txt file and then proceeds to read the Station Id's from 
-	 * Mensonet.txt into an array.
+	 * Mensonet.txt into an array. This method also calculates the index of the stid.
 	 * @throws IOException
 	 */
 	private void read() throws IOException   {
@@ -26,14 +31,21 @@ public class PosAvg {
 		}
 		
 		String newStationId = fileIn.readLine().substring(1, 5);
-		System.out.println(newStationId);  //Testing
+//		System.out.println(newStationId);  //Testing
 		
 		//Make a for loop to read everything in line by line making a new array every time to add 1. if readline == null then stop
 		while (newStationId != null)   {
 			int tempCapacity = capacity;
-			capacity = capacity + 1;   // Note to self: Might need to change later if it causes problems
+			capacity = capacity + 1;  // Note to self: Might need to change later if it causes problems
+			
+			//Finds the index of the STID
+			if ( this.stid.equals(newStationId))   {
+				indexOfStation = capacity;
+			}
+			
 			String[] biggerArray = new String[capacity];
 			biggerArray[capacity - 1] = newStationId;
+			
 			if ( tempCapacity != 0)   {
 				for ( int i = 0; i < tempCapacity; i++ )   {
 					biggerArray[i] = stationIdList[i];
@@ -42,9 +54,11 @@ public class PosAvg {
 			else   {
 				biggerArray[0] = newStationId;
 			}
+			
 	    	stationIdList = biggerArray;
-	    	System.out.println(newStationId);  //Testing
+//	    	System.out.println(newStationId);  //Testing
 	    	newStationId = fileIn.readLine();
+	    	
 	    	if (newStationId != null)  {
 	    		newStationId = newStationId.substring(1, 5);
 	    	}
@@ -53,6 +67,7 @@ public class PosAvg {
 	}
 	
 	public int indexOfStation()   {
+		return indexOfStation;
 		
 	}
 	
