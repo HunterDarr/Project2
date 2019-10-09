@@ -30,7 +30,7 @@ public class MesoInherit extends MesoAbstract {
 	int[] calAverage() {
 		// TODO Auto-generated method stub
 		double doubleAverage = (asciiNumbers[0] + asciiNumbers[1] + asciiNumbers[2] + asciiNumbers[3]) / 4.0;
-		System.out.println("TEST: " + doubleAverage);
+//		System.out.println("TEST: " + doubleAverage);   //Testing
 		int asciiCeil = (int)(Math.ceil(doubleAverage));
 		calculatedAscii[0] = asciiCeil;
 		
@@ -46,7 +46,8 @@ public class MesoInherit extends MesoAbstract {
 	@Override
 	char letterAverage() {
 		// TODO Auto-generated method stub
-		return 0;   //Change?
+		char letterAverage = (char)calculatedAscii[2];
+		return letterAverage;   //Change?
 	}
 
 }
