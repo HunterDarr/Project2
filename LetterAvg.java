@@ -7,6 +7,7 @@ public class LetterAvg {
 	
 	public LetterAvg(char averageLetter)   {
 		
+		
 	}
 	
 	
@@ -14,6 +15,11 @@ public class LetterAvg {
 	public int numberOfStationWithLetterAvg()   {
 		return numberOfStations;
 		
+	}
+	
+	@Override
+	public String toString()   {
+		return null; //Change
 	}
 
 }
