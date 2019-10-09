@@ -35,9 +35,15 @@ public class LetterAvg {
 	public String toString()   {
 		String response = "";
 		for (int i = 0; i < matchingStids.size(); i++ )   {
-			response = response + matchingStids.get(i) + "\n";
+			if (i == matchingStids.size() - 1)   {
+				response = response + matchingStids.get(i);
+			}
+			else {
+				response = response + matchingStids.get(i) + "\n";
+			}
+			
 		}
-		return "They are:\n" + response; //Change
+		return "\nThey are:\n" + response; //Change
 	}
 
 }
