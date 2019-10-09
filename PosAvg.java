@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PosAvg {
 
-	private String[] stationIdList = new String[0];
+	public String[] stationIdList = new String[0];
 
 	private int capacity = 0;
 
