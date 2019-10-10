@@ -9,12 +9,14 @@ public class MesoInherit extends MesoAbstract {
 	public MesoInherit (String stid)   {
 		this.stid = stid;
 		calculateAscii();
+		calculateAverage();
 		
 	}
 	
 	public MesoInherit (MesoStation stid)    {
 		this.stid = stid.getStID();
 		calculateAscii();
+		calculateAverage();
 	}
 	
 	public void calculateAscii ()   {
@@ -42,7 +44,7 @@ public class MesoInherit extends MesoAbstract {
 	@Override
 	int[] calAverage() {
 		// TODO Auto-generated method stub
-		calculateAverage();
+		
 		
 		return calculatedAscii; //return an array
 	}
@@ -50,7 +52,6 @@ public class MesoInherit extends MesoAbstract {
 	@Override
 	char letterAverage() {
 		// TODO Auto-generated method stub
-		calculateAverage();
 		char letterAverage = (char)calculatedAscii[2];
 		return letterAverage;   //Change?
 	}
