@@ -4,15 +4,32 @@ import java.io.IOException;
 
 public class PosAvg {
 
+	/**
+	 * Holds the station Id's from the Mesonet.txt file.
+	 */
 	public String[] stationIdList = new String[0];
 
+	/**
+	 * Holds the capacity of stationIdList.
+	 */
 	private int capacity = 0;
 
+	/**
+	 * Holds the given stid from the PosAvg constructor.
+	 */
 	private String stid;
 
+	/**
+	 * Holds the index of a stid if it is equal to this.stid.
+	 */
 	private int indexOfStation;
 
 
+	/**
+	 * Constructor of this class. Sets stid and calls read().
+	 * @param stid
+	 * @throws IOException
+	 */
 	public PosAvg(String stid) throws IOException   {
 		this.stid = stid;
 		read();
@@ -66,12 +83,19 @@ public class PosAvg {
 		fileIn.close();
 	}
 
+	
+	/**
+	 * Returns indexOfStation
+	 * @return
+	 */
 	public int indexOfStation()   {
 		return indexOfStation;
 	}
 
 
-
+	/**
+	 * Formats the toString().
+	 */
 	@Override
 	public String toString()   {
 		//		System.out.println(indexOfStation);   //Testing
